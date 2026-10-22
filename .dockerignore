@@ -1,0 +1,13 @@
+.git
+.github
+.venv
+__pycache__
+**/__pycache__
+build
+.deploy
+.env
+*.pem
+*.pfx
+tests
+docs
+infra

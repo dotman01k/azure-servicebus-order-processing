@@ -1,0 +1,52 @@
+test_amount_changes_fingerprint (test_orders.ContractTests.test_amount_changes_fingerprint) ... ok
+test_bad_utf8_json_and_size (test_orders.ContractTests.test_bad_utf8_json_and_size) ... ok
+test_broker_message_ids_are_tenant_scoped (test_orders.ContractTests.test_broker_message_ids_are_tenant_scoped) ... ok
+test_duplicate_json_properties (test_orders.ContractTests.test_duplicate_json_properties) ... ok
+test_event_is_not_business_fingerprint (test_orders.ContractTests.test_event_is_not_business_fingerprint) ... ok
+test_invalid_amounts (test_orders.ContractTests.test_invalid_amounts) ... ok
+test_invalid_identifiers (test_orders.ContractTests.test_invalid_identifiers) ... ok
+test_json_order_does_not_change_fingerprint (test_orders.ContractTests.test_json_order_does_not_change_fingerprint) ... ok
+test_missing_extra_non_object (test_orders.ContractTests.test_missing_extra_non_object) ... ok
+test_roundtrip (test_orders.ContractTests.test_roundtrip) ... ok
+test_schema_and_currency (test_orders.ContractTests.test_schema_and_currency) ... ok
+test_tenant_isolation (test_orders.ContractTests.test_tenant_isolation) ... ok
+test_atomic_new_order (test_orders.LedgerTests.test_atomic_new_order) ... ok
+test_concurrent_duplicates (test_orders.LedgerTests.test_concurrent_duplicates) ... ok
+test_duplicate_event (test_orders.LedgerTests.test_duplicate_event) ... ok
+test_event_conflict (test_orders.LedgerTests.test_event_conflict) ... ok
+test_new_event_same_order_binds_event (test_orders.LedgerTests.test_new_event_same_order_binds_event) ... ok
+test_order_conflict (test_orders.LedgerTests.test_order_conflict) ... ok
+test_other_tenant (test_orders.LedgerTests.test_other_tenant) ... ok
+test_complete_failure_then_resend_stable (test_orders.ReplayTests.test_complete_failure_then_resend_stable) ... ok
+test_failed_send_keeps_dlq (test_orders.ReplayTests.test_failed_send_keeps_dlq) ... ok
+test_invalid_does_not_send (test_orders.ReplayTests.test_invalid_does_not_send) ... ok
+test_send_precedes_complete (test_orders.ReplayTests.test_send_precedes_complete) ... ok
+test_stable_id_and_corrected_payload (test_orders.ReplayTests.test_stable_id_and_corrected_payload) ... ok
+test_commit_precedes_ack (test_orders.SettlementTests.test_commit_precedes_ack) ... ok
+test_conflict_deadlettered (test_orders.SettlementTests.test_conflict_deadlettered) ... ok
+test_crash_after_commit_then_redelivery (test_orders.SettlementTests.test_crash_after_commit_then_redelivery) ... ok
+test_failed_deadletter_not_success (test_orders.SettlementTests.test_failed_deadletter_not_success) ... ok
+test_invalid_deadlettered_without_storage (test_orders.SettlementTests.test_invalid_deadlettered_without_storage) ... ok
+test_storage_failure_not_settled (test_orders.SettlementTests.test_storage_failure_not_settled) ... ok
+test_ambiguous_commit_timeout_is_safe_on_redelivery (test_orders.TableAdapterTests.test_ambiguous_commit_timeout_is_safe_on_redelivery) ... ok
+test_auth_failure_propagates (test_orders.TableAdapterTests.test_auth_failure_propagates) ... ok
+test_create_and_duplicate (test_orders.TableAdapterTests.test_create_and_duplicate) ... ok
+test_no_orphan_inbox (test_orders.TableAdapterTests.test_no_orphan_inbox) ... ok
+test_order_conflict_reconciled (test_orders.TableAdapterTests.test_order_conflict_reconciled) ... ok
+test_replica_wins_race (test_orders.TableAdapterTests.test_replica_wins_race) ... ok
+test_timeout_propagates (test_orders.TableAdapterTests.test_timeout_propagates) ... ok
+test_accepts_project_endpoint (test_orders.WiringTests.test_accepts_project_endpoint) ... ok
+test_bad_wire_body (test_orders.WiringTests.test_bad_wire_body) ... ok
+test_credential_has_no_secret_fallback (test_orders.WiringTests.test_credential_has_no_secret_fallback) ... ok
+test_real_sdk_wire_body (test_orders.WiringTests.test_real_sdk_wire_body) ... ok
+test_rejects_arbitrary_endpoint (test_orders.WiringTests.test_rejects_arbitrary_endpoint) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 0.046s
+
+OK
+Compiled template security and deployment contracts passed
+
+Actionlint v1.7.12: all three workflow files passed.
+Dependency check: pip check passed.
+Bicep CLI: 0.48.1 (cec7951cf6).

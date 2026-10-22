@@ -1,0 +1,14 @@
+// Application outcomes and unexpected failures. Select the project's workspace first.
+ContainerAppConsoleLogs_CL
+| where TimeGenerated > ago(1h)
+| where ContainerAppName_s endswith "-worker"
+| extend entry = parse_json(Log_s)
+| summarize Count=count() by Event=tostring(entry.event), Outcome=tostring(entry.outcome), bin(TimeGenerated, 5m)
+
+// Processing duration percentiles; excludes Azure platform and non-JSON records.
+ContainerAppConsoleLogs_CL
+| where TimeGenerated > ago(1h)
+| where ContainerAppName_s endswith "-worker"
+| extend entry=parse_json(Log_s)
+| where tostring(entry.event) == "message_processed"
+| summarize p50=percentile(todouble(entry.duration_ms),50), p95=percentile(todouble(entry.duration_ms),95) by bin(TimeGenerated,5m)
